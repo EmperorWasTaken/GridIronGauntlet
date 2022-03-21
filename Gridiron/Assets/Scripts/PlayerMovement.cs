@@ -5,17 +5,15 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
+    [SerializeField] private float _moveSpeed = 5f;
     private PlayerInput _playerInput;
-    private float _moveSpeed = 1;
-
 
     private void Start()
     {
         _playerInput = GetComponent<PlayerInput>();
     }
 
-    void Update()
+    void LateUpdate()
     {
         Movement();
     }
@@ -25,7 +23,10 @@ public class PlayerMovement : MonoBehaviour
     private void Movement()
     {
         transform.position +=
-            new Vector3(_playerInput.horizontal * _moveSpeed * Time.deltaTime, 0f, _playerInput.vertical * _moveSpeed * Time.deltaTime) ;
+            new Vector3(
+                _playerInput.horizontal,
+                0f,
+                _playerInput.vertical).normalized * _moveSpeed * Time.deltaTime;
     }
     
 }

@@ -44,10 +44,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstacles:
-  - {fileID: 2574598029634018551, guid: a5e02e19a1bbbf41390258f5086236d2, type: 3}
-  - {fileID: 4977756411030945627, guid: c7ed380290a78c050b4f2224925f59c7, type: 3}
-  - {fileID: 6032821918281999079, guid: 718c9cd7a714a1692b203f714473e905, type: 3}
-  - {fileID: 7580640367008227883, guid: 3edfe89d745f6cf50a0bf86a6297338d, type: 3}
+  - {fileID: 6526742222376657984, guid: 609440377366de94f8440e8cf44e3105, type: 3}
+  - {fileID: 972887268611475532, guid: daedfa8917e26eac9be2b8b20073acf0, type: 3}
+  - {fileID: 7009954811220058122, guid: 653fb3e4a6e13f0c9bdb2b73e858a620, type: 3}
+  - {fileID: -5004420927540368605, guid: 6dfe7be1d1f6a03cc93aa0e654f9dc86, type: 3}
   gridSize: 5
   _horizontal: 1
   minSpawnTime: 2

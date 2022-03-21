@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Obstacle : MonoBehaviour
 {
+    [SerializeField] private Transform box;
     public float Size { get; private set; }
     public float Speed { get; private set; }
 
@@ -13,7 +14,7 @@ public class Obstacle : MonoBehaviour
     private void Awake()
     {
         _eventSystem = GetComponent<GameEventSystem>();
-        Size = transform.localScale.x;
+        Size = box.gameObject.transform.localScale.x;
         Speed = 2f;
     }
 
@@ -24,7 +25,7 @@ public class Obstacle : MonoBehaviour
 
     private void Movement()
     {
-        transform.position += transform.forward * Speed * Time.deltaTime;
+        transform.position += transform.forward * Time.deltaTime;
     }
 
     private void OnTriggerEnter(Collider other)
