@@ -36,12 +36,11 @@ public class ObstacleSpawner : MonoBehaviour
         {
             int obstacleIndex = Random.Range(0, obstacles.Count);
             var obstacleToSpawn = obstacles[obstacleIndex];
-            
-            var offset = _horizontal ? 
-                new Vector3(Random.Range(0, gridSize - obstacleToSpawn.Size), 0f, 0f) 
-                : new Vector3(0f, 0f, Random.Range(0, gridSize - obstacleToSpawn.Size));
-            
-            var obstacle = Instantiate(obstacleToSpawn, transform.position + offset, transform.localRotation);
+
+            var obstacle = Instantiate(
+                obstacleToSpawn,
+                transform.position + RandomOffset(obstacleToSpawn),
+                transform.localRotation);
             
             StartCoroutine(ObstacleLifeTime(obstacle));
 
@@ -53,5 +52,12 @@ public class ObstacleSpawner : MonoBehaviour
     {
         yield return new WaitForSeconds(5f);
         Destroy(obstacle.gameObject);
+    }
+
+    private Vector3 RandomOffset(Obstacle obstacleToSpawn)
+    {
+        return _horizontal ? 
+            new Vector3(Random.Range(0, gridSize - obstacleToSpawn.Size), 0f, 0f) 
+            : new Vector3(0f, 0f, Random.Range(0, gridSize - obstacleToSpawn.Size));
     }
 }
