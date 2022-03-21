@@ -1,13 +1,13 @@
-﻿# Default ignored files
+# Default ignored files
 /shelf/
 /workspace.xml
 # Rider ignored files
-/projectSettingsUpdater.xml
-/.idea.Gridiron.iml
 /contentModel.xml
+/.idea.Gridiron.iml
+/projectSettingsUpdater.xml
 /modules.xml
-# Datasource local storage ignored files
-/../../../../../../../../../../../:\Users\Kanata\PWRgame\gitHubpwr\gridiron\GridIronGauntlet\Gridiron\.idea\.idea.Gridiron\.idea/dataSources/
-/dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
